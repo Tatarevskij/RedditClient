@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RedditCL</string>
+    <string name="user_name">имя пользователя</string>
+    <string name="created_at">создан</string>
+    <string name="comment_text">текст комментария</string>
+    <string name="load_next_comments">Загрузить еще</string>
+    <string name="comments">Комментарии</string>
+    <string name="reddits">Реддиты</string>
+    <string name="all">Все</string>
+    <string name="saved">Сохраненные</string>
+    <string name="my_friends">Список друзей</string>
+    <string name="clean_storage_btn">Очистить сохранённые</string>
+    <string name="logout_btn">Выйти</string>
+    <string name="subscribe">Подписаться</string>
+    <string name="show_all_btn">Смотреть все</string>
+    <string name="delete">удалить</string>
+    <string name="login">войти</string>
+    <string name="load_more">загрузить еще...</string>
+    <string name="by">От:</string>
+    <string name="reposted_from">Репост из:</string>
+    <string name="search">Найти</string>
+    <string name="new_string">новые</string>
+    <string name="popular">популярные</string>
+    <string name="welcome">Добро пожаловать</string>
+    <string name="try_string">попробовать</string>
+    <string name="on">На:</string>
+    <string name="server_failed">ошибка загрузки с сервера:</string>
+    <string name="load_from_cache">локальная загрузка</string>
+    <string name="friends_all">Всего друзей %1$d</string>
+    <string name="unsubscribe">Отписаться</string>
+    <string name="skip_btn">пропустить</string>
+    <string name="ob1_title">Добро пожаловать в Humblr</string>
+    <string name="ob2_title">SubHumblr</string>
+    <string name="ob3_title">Делись и сохраняй</string>
+    <string name="ob1_text">Здесь собраны сообщества по всевозможным интересам</string>
+    <string name="ob2_text">Ты можешь найти новые сабы по интересам и посмотреть сабы, на которые подписан</string>
+    <string name="ob3_text">"Вкладка избранное хранит закладки с комментариями и сабами. В профиле ты найдёшь информацию о себе. "</string>
+    <string name="ready_btn">готово</string>
+    <string name="welcome_txt">Найди единомышленников с Humblr</string>
+    <string name="humblr">Humblr</string>
+</resources>

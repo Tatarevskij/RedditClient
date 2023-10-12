@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/onBoardingFragment">
+
+    <fragment
+        android:id="@+id/authorizationFragment"
+        android:name="com.example.redditclient.presentation.authorization.AuthorizationFragment"
+        android:label="fragment_authorization"
+        tools:layout="@layout/fragment_authorization" >
+        <action
+            android:id="@+id/action_authorizationFragment_to_subredditsFragment"
+            app:destination="@id/linksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/linksFragment"
+        android:name="com.example.redditclient.presentation.fragments.LinksFragment"
+        android:label="fragment_links"
+        tools:layout="@layout/fragment_links" >
+        <action
+            android:id="@+id/action_linksFragment_to_linkDetailsFragment"
+            app:destination="@id/linkDetailsFragment" />
+        <action
+            android:id="@+id/action_linksFragment_to_userDetailsFragment"
+            app:destination="@id/userDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.example.redditclient.presentation.fragments.FavoritesFragment"
+        android:label="fragment_favorites"
+        tools:layout="@layout/fragment_favorites" >
+        <action
+            android:id="@+id/action_favoritesFragment_to_linkDetailsFragment"
+            app:destination="@id/linkDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.redditclient.presentation.fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_friendsFragment"
+            app:destination="@id/friendsFragment" />
+    </fragment>
+    <action android:id="@+id/action_global_linksFragment" app:destination="@id/linksFragment" />
+    <action android:id="@+id/action_global_favoritesFragment" app:destination="@id/favoritesFragment" />
+    <action android:id="@+id/action_global_profileFragment" app:destination="@id/profileFragment" />
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.example.redditclient.presentation.authorization.OnBoardingFragment"
+        android:label="fragment_on_boarding"
+        tools:layout="@layout/fragment_on_boarding" >
+        <action
+            android:id="@+id/action_onBoardingFragment_to_authorizationFragment"
+            app:destination="@id/authorizationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/linkDetailsFragment"
+        android:name="com.example.redditclient.presentation.fragments.LinkDetailsFragment"
+        android:label="fragment_link_details"
+        tools:layout="@layout/fragment_link_details" >
+        <argument
+            android:name="linkId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/commentsLightFragment"
+        android:name="com.example.redditclient.presentation.fragments.CommentsLightFragment"
+        android:label="fragment_comments_light"
+        tools:layout="@layout/fragment_comments_light" >
+        <argument
+            android:name="linkId"
+            app:argType="string" />
+    </fragment>
+    <action android:id="@+id/action_global_commentsLightFragment" app:destination="@id/commentsLightFragment" />
+    <fragment
+        android:id="@+id/friendsFragment"
+        android:name="com.example.redditclient.presentation.fragments.FriendsFragment"
+        android:label="fragment_friends"
+        tools:layout="@layout/fragment_friends" /><action android:id="@+id/action_global_authorizationFragment" app:destination="@id/authorizationFragment"/>
+    <fragment
+        android:id="@+id/userDetailsFragment"
+        android:name="com.example.redditclient.presentation.fragments.UserDetailsFragment"
+        android:label="fragment_user_details"
+        tools:layout="@layout/fragment_user_details" >
+        <action
+            android:id="@+id/action_userDetailsFragment_to_linkDetailsFragment"
+            app:destination="@id/linkDetailsFragment" />
+    </fragment><action android:id="@+id/action_global_userDetailsFragment" app:destination="@id/userDetailsFragment"/>
+    <fragment
+        android:id="@+id/subredditFragment"
+        android:name="com.example.redditclient.presentation.fragments.SubredditFragment"
+        android:label="fragment_subreddit"
+        tools:layout="@layout/fragment_subreddit" >
+        <action
+            android:id="@+id/action_subredditFragment_to_linkDetailsFragment"
+            app:destination="@id/linkDetailsFragment" />
+    </fragment>
+    <action android:id="@+id/action_global_subredditFragment" app:destination="@id/subredditFragment" />
+    <action android:id="@+id/action_global_linkDetailsFragment" app:destination="@id/linkDetailsFragment" />
+</navigation>

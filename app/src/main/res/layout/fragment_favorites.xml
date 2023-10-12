@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.fragments.FavoritesFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/purple_600_transp"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/srComSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:switchMinWidth="300dp"
+            android:textOff="@string/reddits"
+            android:textOn="@string/comments"
+            android:thumb="@drawable/custom_thumb"
+            app:thumbTextPadding="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:showText="true"
+            app:switchTextAppearance="@style/textSwitch"
+            app:track="@drawable/switch_custom" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/srComSwitch"
+            app:layout_constraintEnd_toEndOf="@id/srComSwitch"
+            app:layout_constraintStart_toStartOf="@id/srComSwitch"
+            app:layout_constraintTop_toTopOf="@id/srComSwitch">
+
+            <TextView
+                android:id="@+id/srText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/reddits"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/comText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/comments"
+                android:textSize="15sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/allSaveSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:switchMinWidth="300dp"
+            android:textOff="@string/all"
+            android:textOn="@string/saved"
+            android:thumb="@drawable/custom_thumb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/srComSwitch"
+            app:showText="true"
+            app:switchTextAppearance="@style/textSwitch"
+            app:thumbTextPadding="30dp"
+            app:track="@drawable/switch_custom" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/allSaveSwitch"
+            app:layout_constraintEnd_toEndOf="@id/allSaveSwitch"
+            app:layout_constraintStart_toStartOf="@id/allSaveSwitch"
+            app:layout_constraintTop_toTopOf="@id/allSaveSwitch">
+
+            <TextView
+                android:id="@+id/allText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/all"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/savedText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/saved"
+                android:textSize="15sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/allSaveSwitch" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
